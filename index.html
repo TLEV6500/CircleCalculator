@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 6</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Scripts for rendering MathJax Equations -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- My own JS script -->
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <nav id="top_nav" class="f-row f-jc-between">
+    <h1 id="title" class="fs-m">Calculate-Circle-Specs-inator!<span class="fs-s" id="author_subtitle">by TLEV</span>
+    </h1>
+    <button id="toggle_theme">Dark</button>
+  </nav>
+  <main>
+    <section id="calculator" class="">
+      <h2 class="fs-m">Calculator</h2>
+      <form action="/" id="calculator_form" class="card-container">
+        <div class="calc-input f-row f-jc-stretched">
+          <div class="input-label">
+            <input type="radio" name="input" id="radius_solve" value="radius" checked>
+            <label for="radius_inpt">Radius:</label>
+          </div>
+          <div class="input-field">
+            <input type="number" name="radius" id="radius_inpt" class="fs-r" min="0" step="0.0001">
+            <p class="error-msg fs-xs">Radius Error</p>
+          </div>
+        </div>
+        <div class="calc-input f-row f-jc-stretched">
+          <div class="input-label">
+            <input type="radio" name="input" id="area_solve" value="area">
+            <label for="area_inpt">Area:</label>
+          </div>
+          <div class="input-field">
+            <input type="number" name="area" id="area_inpt" class="fs-r" min="0" step="0.0001">
+            <p class="error-msg fs-xs">Area Error</p>
+          </div>
+        </div>
+        <div class="calc-input f-row f-jc-stretched">
+          <div class="input-label">
+            <input type="radio" name="input" id="circumference_solve" value="circumference">
+            <label for="circum_inpt">Circumference:</label>
+          </div>
+          <div class="input-field">
+            <input type="number" name="circumference" id="circum_inpt" class="fs-r" min="0" step="0.0001">
+            <p class="error-msg fs-xs">Circumference Error</p>
+          </div>
+        </div>
+        <div id="calc_controls">
+          <button type="submit" id="submit">Calculate!</button>
+          <button type="reset" id="reset">Clear</button>
+        </div>
+      </form>
+    </section>
+    <section id="formulas">
+      <h2 class="fs-m">Formulas</h2>
+      <div class="card-container" id="formula_display">
+        <div id="area_formula">
+          <p class="formulas">\(A=\pi r^2\)</p>
+          <p class="formula-results"></p>
+        </div>
+        <div id="circumference_formula">
+          <p class="formulas">\(C=2\pi r\)</p>
+          <p class="formula-results"></p>
+        </div>
+        <div id="radius_by_area_formula">
+          <p class="formulas">\(r=\pm\sqrt{\frac{A}{\pi}}\)</p>
+          <p class="formula-results"></p>
+        </div>
+        <div id="radius_by_circumference_formula">
+          <p class="formulas">\(r=\frac{C}{2\pi}\)</p>
+          <p class="formula-results"></p>
+        </div>
+      </div>
+    </section>
+    <!-- <section id="visualizer"></section> -->
+    <section id="history">
+      <h2 class="fs-m">History</h2>
+      <div class="container card-container">
+        <div class="" id="history_body">
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="fs-s">
+    <span>Tim Leobert E. Villacin</span>
+    <span>TLEV©2024</span>
+    <span>CSIT201-F2</span>
+  </footer>
+</body>
+
+</html>
